@@ -262,9 +262,9 @@
         customize_show="True"
         priority="30"
     >
-        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+        <xpath expr="//div[@id='portal_client_category']" position="inside">
             <t t-call="portal.portal_docs_entry">
-                <t t-set="title">Bookings</t>
+                <t t-set="title">Your Bookings</t>
                 <t t-set="url" t-value="'/my/bookings'" />
                 <t t-set="placeholder_count" t-value="'booking_count'" />
             </t>
