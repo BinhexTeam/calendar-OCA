@@ -1,2 +1,1 @@
-This addon allows portal users to create bookings from the portal if
-they have the necessary permissions.
+This addon enables portal users to create resource bookings directly from the customer portal when they have the appropriate permissions. Newly created bookings will remain in a pending state and require manual confirmation by administrators.
