@@ -21,11 +21,12 @@ class ResourceBooking(models.Model):
         res = self.create(
             {
                 "name": values.get("resource_name"),
-                "type_id": values.get("resource_type"),
+                "type_id": int(values.get("resource_type")),
                 "description": values.get("resource_description"),
                 "combination_auto_assign": True,
                 "partner_id": partner.id,
                 "user_id": user.id,
             }
         )
+
         return {"id": res.id}

@@ -3,7 +3,6 @@
 
 
 from datetime import datetime
-from urllib.parse import quote_plus
 
 from dateutil.parser import isoparse
 
@@ -40,7 +39,7 @@ class CustomerPortal(portal.CustomerPortal):
         except ValidationError as error:
             url = booking_sudo.get_portal_url(
                 suffix=f"/schedule/{when_tz_aware:%Y/%m}",
-                query_string=f"&error={quote_plus(error.name)}",
+                query_string=f"&error={error.args[0]}",
             )
             return request.redirect(url)
         return request.redirect(booking_sudo.get_portal_url())
